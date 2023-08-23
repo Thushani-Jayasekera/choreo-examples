@@ -19,9 +19,9 @@
     const apiUrlSpan = document.getElementById('apiUrl');
     const name = document.getElementById('name');
 
-    apiKeySpan.textContent = window.configs.apiKey;
+    apiKeySpan.setAttribute (window.configs.apiKey);
     apiUrlSpan.textContent = window.configs.apiUrl;
-    name.textContent = window.config.name;
+    name.setAttribute (window.config.name);
   </script>
 </body>
 </html>
