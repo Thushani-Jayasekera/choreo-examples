@@ -24,6 +24,8 @@ enum Status {
     to_read = "to_read"
 }
 
+// new comment
+
 type BookItem record {|
     string title;
     string author;
