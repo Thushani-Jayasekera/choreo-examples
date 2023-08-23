@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static Web App</title>
+  <!-- Set your configurations here -->
+  <script src="./config.js"></script>
+</head>
+<body>
+  <h1>Static Web App</h1>
+  <p>API Key: <span id="apiKey"></span></p>
+  <p>API URL: <span id="apiUrl"></span></p>
+  <script>
+    // Access the configuration values and update the HTML
+    const apiKeySpan = document.getElementById('apiKey');
+    const apiUrlSpan = document.getElementById('apiUrl');
+
+    apiKeySpan.textContent = window.configs.apiKey;
+    apiUrlSpan.textContent = window.configs.apiUrl;
+  </script>
+</body>
+</html>
