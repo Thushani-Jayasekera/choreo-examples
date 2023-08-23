@@ -6,18 +6,22 @@
   <title>Static Web App</title>
   <!-- Set your configurations here -->
   <script src="./config.js"></script>
+  <script src="./public/configure.js"></script>
 </head>
 <body>
   <h1>Static Web App</h1>
   <p>API Key: <span id="apiKey"></span></p>
   <p>API URL: <span id="apiUrl"></span></p>
+  <p>name: <span id="name"></span></p>
   <script>
     // Access the configuration values and update the HTML
     const apiKeySpan = document.getElementById('apiKey');
     const apiUrlSpan = document.getElementById('apiUrl');
+    const name = document.getElementById('name');
 
     apiKeySpan.textContent = window.configs.apiKey;
     apiUrlSpan.textContent = window.configs.apiUrl;
+    name.textContent = window.config.name;
   </script>
 </body>
 </html>
