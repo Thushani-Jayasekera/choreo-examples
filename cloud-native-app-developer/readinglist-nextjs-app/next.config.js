@@ -3,7 +3,8 @@ const nextConfig = {
     experimental: {
       appDir: true,
     },
-    distDir: 'build',
+    output: 'standalone',
+    //distDir: 'build',
     images: {
       domains: ['lh3.googleusercontent.com'],
     },

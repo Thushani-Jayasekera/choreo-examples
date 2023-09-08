@@ -4,14 +4,14 @@ const handler = NextAuth({
     {
       id: "asgardeo",
       name: "Asgardeo",
-      clientId: process.env.ASGARDEO_CLIENT_ID,
-      clientSecret: process.env.ASGARDEO_CLIENT_SECRET,
+      clientId: "TjIWeMvg0oUeuxon3Kmy81UU0wMa",
+      clientSecret: "8qQK8hxYJajfzYh7m0CJ5S7FdaXOheGwsmg1twt5gS4a",
       type: "oauth",
       wellKnown:
         "https://api.asgardeo.io/t/" +
-        process.env.ASGARDEO_ORGANIZATION_NAME +
+        "thushani"+
         "/oauth2/token/.well-known/openid-configuration",
-      authorization: { params: { scope: process.env.ASGARDEO_SCOPES } },
+      authorization: { params: { scope: "openid email profile internal_login" } },
       idToken: true,
       checks: ["pkce", "state"],
       profile(profile) {
@@ -23,7 +23,7 @@ const handler = NextAuth({
       },
     },
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: "secret1234",
   session: {
     strategy: "jwt",
   },
