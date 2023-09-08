@@ -38,21 +38,21 @@ ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN addgroup --system --gid 10001 nodejs
-RUN adduser --system --uid 10001 nextjs
+RUN addgroup --system --gid 10001 10001
+RUN adduser --system --uid 10001 10002
 
 COPY --from=builder /app/public ./public
 
 # Set the correct permission for prerender cache
 RUN mkdir .next
-RUN chown nextjs:nodejs .next
+RUN chown 10002:10001 .next
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:10001 /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:10001 /app/.next/static ./.next/static
 
-USER nextjs
+USER 10002
 
 EXPOSE 3000
 
