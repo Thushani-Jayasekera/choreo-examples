@@ -12,10 +12,7 @@ export const connectToDB = async () => {
 
     try {
         connection = await mysql.createConnection({
-            host: process.env.MYSQL_HOST,
-            user: process.env.MYSQL_USER,
-            password: process.env.MYSQL_PASSWORD,
-            database: 'books'
+            uri: "mysql://avnadmin:AVNS_i05J3zCryqS971Ucr-c@mysql-next-wso2-projects.aivencloud.com:10386/defaultdb?ssl-mode=REQUIRED"
         });
 
         isConnected = true;
