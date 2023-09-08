@@ -32,6 +32,8 @@ RUN npm run build
 
 RUN chown -R 10500:10500 "/usr/src/app"
 
+USER 10500
+
 EXPOSE 3000
 
 CMD [ "npm", "start" ]
