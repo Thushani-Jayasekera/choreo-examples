@@ -2,7 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create the .env file at your project root:
+```
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NEXTAUTH_URL=
+NEXTAUTH_URL_INTERNAL= 
+NEXTAUTH_SECRET=
+MYSQL_HOST=
+MYSQL_USER=
+MYSQL_PASSWORD=
+ASGARDEO_CLIENT_ID=
+ASGARDEO_CLIENT_SECRET=
+ASGARDEO_SCOPES=openid email profile internal_login
+ASGARDEO_ORGANIZATION_NAME=
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
